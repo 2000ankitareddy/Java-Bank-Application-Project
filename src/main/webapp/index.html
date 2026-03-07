@@ -246,25 +246,28 @@ result+=numbers[Math.floor(Math.random()*numbers.length)]
 return result
 }
 
-function createAccount(){ 
+function createAccount(){
 
 let name = document.getElementById("nameInput").value.trim()
+let phone = document.getElementById("phoneInput").value.trim()
+let address = document.getElementById("addressInput").value
+let dob = document.getElementById("dobInput").value
 
 if(name === ""){
 alert("Please enter your Full Name")
 return
 }
 
-alert("Account Created")
+if(phone === ""){
+alert("Please enter your Phone Number")
+return
+}
 
-let name=document.getElementById("nameInput").value
-let phone=document.getElementById("phoneInput").value
-let address=document.getElementById("addressInput").value
-let dob=document.getElementById("dobInput").value
+alert("Account Created Successfully")
 
-let accountNumber=generateNumber(12)
-let atmNumber=generateNumber(16)
-let cvv=generateNumber(3)
+let accountNumber = generateNumber(12)
+let atmNumber = generateNumber(16)
+let cvv = generateNumber(3)
 
 document.getElementById("holderName").innerText=name
 document.getElementById("accountNumber").innerText=accountNumber
