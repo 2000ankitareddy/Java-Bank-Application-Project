@@ -2,25 +2,26 @@ pipeline {
     agent any
 
     environment {
-        GIT_REPO        = "https://github.com/mehar-pa-45/Java-indigo-Airlines.git"
-        GIT_BRANCH      = "main"
 
-        DOCKERHUB_USER  = "mehardocker45"
-        IMAGE_NAME      = "react-app"
-        IMAGE_TAG       = "${BUILD_NUMBER}"
+        GIT_REPO   = "https://github.com/mehar-pa-45/Java-indigo-Airlines.git"
+        GIT_BRANCH = "main"
 
-        DOCKER_CREDS    = "Docker_CRED"
+        DOCKERHUB_USER = "mehardocker45"
+        IMAGE_NAME     = "java-indigo-airlines"
+        IMAGE_TAG      = "${BUILD_NUMBER}"
 
-        CONTAINER_NAME  = "react-container"
-        HOST_PORT       = "8081"
-        CONTAINER_PORT  = "80"
+        DOCKER_CREDS   = "Docker_CRED"
+
+        CONTAINER_NAME = "indigo-airlines-container"
+        HOST_PORT      = "8081"
+        CONTAINER_PORT = "8080"
     }
 
     stages {
 
         stage('Checkout Code') {
             steps {
-              checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-cred', url: 'https://github.com/mehar-pa-45/Java-indigo-Airlines.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-cred', url: 'https://github.com/mehar-pa-45/Java-indigo-Airlines.git']])
             }
         }
 
