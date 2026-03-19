@@ -6,14 +6,14 @@
  <modelVersion>4.0.0</modelVersion>
 
  <groupId>com.indigo</groupId>
- <artifactId>java-indigo-airlines</artifactId>
+ <artifactId>java-Bank-Application-Project</artifactId>
  <version>1.0</version>
  <packaging>war</packaging>
 
- <name>java-indigo-airlines</name>
+ <name>java-Bank-Application-Project</name>
 
  <build>
-   <finalName>indigo-airlines</finalName>
+   <finalName>Bank-Application</finalName>
  </build>
 
 </project>
