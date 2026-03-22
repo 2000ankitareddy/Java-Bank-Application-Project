@@ -7,7 +7,6 @@ pipeline {
         IMAGE_TAG      = "${BUILD_NUMBER}"
         DOCKER_CREDS   = "docker-credentials"
     }
-
     stages {
 
         stage('Checkout Code') {
