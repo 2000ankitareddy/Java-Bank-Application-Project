@@ -10,7 +10,7 @@ pipeline {
         IMAGE_NAME     = "java-bank-application-project"
         IMAGE_TAG      = "${BUILD_NUMBER}"
 
-        DOCKER_CREDS   = "Docker_CRED"
+        DOCKER_CREDS   = "docker-credentials"
 
         CONTAINER_NAME = "Bank-Application-container"
         HOST_PORT      = "8081"
