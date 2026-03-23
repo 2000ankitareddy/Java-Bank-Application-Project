@@ -5,7 +5,7 @@ pipeline {
         DOCKERHUB_USER = "ankitanallamilli"
         IMAGE_NAME     = "banking-application"
         IMAGE_TAG      = "${BUILD_NUMBER}"
-        DOCKER_CREDS   = "ANKITA_DOCK-HUB"
+        DOCKER_CREDS   = "ANKITA_DOCK_HUB"
     }
     stages {
 
