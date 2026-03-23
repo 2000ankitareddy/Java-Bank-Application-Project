@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: banking-app-container
-        image: ankitanallamilli/banking-application:latest
+        image: ankitanallamilli/banking-application:IMAGE_TAG
         ports:
         - containerPort: 8080
 ---
@@ -31,7 +31,7 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 8080
-  type: NodePort
+  type: LoadBalancer
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
