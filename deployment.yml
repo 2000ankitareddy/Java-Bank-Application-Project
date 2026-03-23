@@ -52,3 +52,19 @@ spec:
             name: banking-app-service
             port:
               number: 80
+
+      - path: /other
+        pathType: Prefix
+        backend:
+          service:
+            name: other-service
+            port:
+              number: 80
+
+      - path: /ot
+        pathType: Prefix
+        backend:
+          service:
+            name: other-service
+            port:
+              number: 80
