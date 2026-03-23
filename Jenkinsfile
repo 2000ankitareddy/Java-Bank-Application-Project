@@ -49,31 +49,5 @@ pipeline {
                 """
             }
         }
-
-        stage('Update Deployment Image Tag') {
-            steps {
-                sh '''
-                sed -i "s|IMAGE_TAG|${BUILD_NUMBER}|g" deployment.yml
-                '''
-            }
-        }
-
-        stage('Configure EKS Access') {
-            steps {
-                sh '''
-                aws eks update-kubeconfig --region us-east-1 --name saicluster
-                kubectl get nodes
-                '''
-            }
-        }
-
-        stage('Deploy to Kubernetes') {
-            steps {
-                sh '''
-                kubectl apply -f deployment.yml
-                '''
-            }
-        }
-
     }
 }
