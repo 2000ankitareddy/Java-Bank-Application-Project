@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_USER = "lakshmivinuthnamutyala"
+        DOCKERHUB_USER = "ankitanallamilli"
         IMAGE_NAME     = "banking-application"
         IMAGE_TAG      = "${BUILD_NUMBER}"
-        DOCKER_CREDS   = "docker-credentials"
+        DOCKER_CREDS   = "ANKITA_DOCK-HUB"
     }
     stages {
 
@@ -13,7 +13,7 @@ pipeline {
             steps {
                 git branch: 'main',
                 credentialsId: 'Github-Cred',
-                url: 'https://github.com/muthyalavinuthna/Java-Bank-Application-Project.git'
+                url: 'https://github.com/2000ankitareddy/Java-Bank-Application-Project.git'
             }
         }
 
